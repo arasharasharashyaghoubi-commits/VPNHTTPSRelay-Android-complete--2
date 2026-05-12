@@ -1,27 +1,142 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_root_gradient"
+    android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/deploymentIdInput"
-        android:hint="Deployment ID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <EditText
-        android:id="@+id/authKeyInput"
-        android:hint="Auth Key"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/connectButton"
-        android:text="اتصال"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layoutDirection="rtl"
+        android:padding="22dp">
 
-</LinearLayout>
+        <!-- لوگو -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/footer_brand"
+            android:src="@drawable/logo" />
+
+        <!-- خط طلایی زیر لوگو -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/divider_gold" />
+
+        <!-- کارت اصلی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:elevation="10dp"
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_main"
+                android:textColor="@color/gold_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/subtitle_main"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+
+            <!-- Deployment ID -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/label_deployment_id"
+                android:textColor="@color/gold_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/deploymentIdInput"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="@string/hint_deployment_id"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/text_white"
+                android:textColorHint="@color/gray_mid"
+                android:textDirection="ltr"
+                android:textSize="14sp" />
+
+            <!-- Auth Key -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/label_auth_key"
+                android:textColor="@color/gold_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/authKeyInput"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="@string/hint_auth_key"
+                android:inputType="textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/text_white"
+                android:textColorHint="@color/gray_mid"
+                android:textDirection="ltr"
+                android:textSize="14sp" />
+
+            <!-- دکمه اتصال -->
+            <Button
+                android:id="@+id/connectButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/bg_button_gold"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"
+                android:text="@string/btn_connect"
+                android:textAllCaps="false"
+                android:textColor="@color/navy_deep"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- فوتر برند -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/footer_brand"
+            android:textColor="@color/gold_primary"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</ScrollView>
