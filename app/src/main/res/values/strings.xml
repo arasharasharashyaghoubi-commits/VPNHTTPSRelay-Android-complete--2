@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">VPN HTTPS Relay</string>
+    <string name="title_main">VPN HTTPS Relay</string>
+    <string name="subtitle_main">برای اتصال، اطلاعات زیر را وارد کنید</string>
+    <string name="label_deployment_id">Deployment ID</string>
+    <string name="label_auth_key">Auth Key</string>
+    <string name="hint_deployment_id">Deployment ID خود را وارد کنید</string>
+    <string name="hint_auth_key">Auth Key خود را وارد کنید</string>
+    <string name="btn_connect">اتصال</string>
+    <string name="footer_brand">ARASH yaghoubi</string>
 </resources>
